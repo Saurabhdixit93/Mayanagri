@@ -1,0 +1,5 @@
+node_modules
+dist
+.venv-tools
+youtube_channel/
+dist/
