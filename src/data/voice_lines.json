@@ -1,0 +1,1056 @@
+{
+ "_help": "Voice script. scripts/gen_voices.py turns every line into public/voices/<id>.mp3 using Microsoft Edge neural voices. 'say' is what the voice speaks, 'en' is the subtitle. mode: all | clean (only when 18+ is off) | mature (only when 18+ is on).",
+ "speakers": {
+  "player": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+6%",
+   "pitch": "-4Hz"
+  },
+  "man": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+14%",
+   "pitch": "+8Hz"
+  },
+  "woman": {
+   "voice": "hi-IN-SwaraNeural",
+   "rate": "+10%",
+   "pitch": "+0Hz"
+  },
+  "aunty": {
+   "voice": "hi-IN-SwaraNeural",
+   "rate": "+4%",
+   "pitch": "-8Hz"
+  },
+  "cop": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "-4%",
+   "pitch": "-14Hz"
+  },
+  "autowala": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+18%",
+   "pitch": "+12Hz"
+  },
+  "don": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "-12%",
+   "pitch": "-20Hz"
+  },
+  "goon": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+8%",
+   "pitch": "-8Hz"
+  },
+  "dj": {
+   "voice": "en-IN-PrabhatNeural",
+   "rate": "+12%",
+   "pitch": "+2Hz"
+  },
+  "rj": {
+   "voice": "en-IN-NeerjaExpressiveNeural",
+   "rate": "+8%",
+   "pitch": "+0Hz"
+  },
+  "news": {
+   "voice": "en-IN-NeerjaNeural",
+   "rate": "+0%",
+   "pitch": "+0Hz"
+  },
+  "sharma": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+2%",
+   "pitch": "+3Hz"
+  },
+  "narrator": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "-10%",
+   "pitch": "-6Hz"
+  },
+  "pappu": {
+   "voice": "hi-IN-MadhurNeural",
+   "rate": "+16%",
+   "pitch": "+10Hz"
+  }
+ },
+ "lines": [
+  {
+   "id": "welcome_1",
+   "event": "welcome",
+   "spk": "player",
+   "say": "स्वागत है मायानगरी में! यहाँ सपने भी ट्रैफिक में फँसते हैं।",
+   "en": "Welcome to Mayanagri! Even dreams get stuck in traffic here."
+  },
+  {
+   "id": "crash_1",
+   "event": "crash",
+   "spk": "player",
+   "say": "अरे भाई भाई भाई!",
+   "en": "Arre bhai bhai bhai!"
+  },
+  {
+   "id": "crash_2",
+   "event": "crash",
+   "spk": "player",
+   "say": "गाड़ी का कचूमर बना दिया!",
+   "en": "Gaadi ka kachumbar bana diya!"
+  },
+  {
+   "id": "crash_3",
+   "event": "crash",
+   "spk": "man",
+   "say": "देख के चला ना! लाइसेंस किसने दिया तुझे?",
+   "en": "Dekh ke chala na! License kisne diya tujhe?"
+  },
+  {
+   "id": "crash_4",
+   "event": "crash",
+   "spk": "player",
+   "say": "ये क्या हो गया!",
+   "en": "Ye kya ho gaya!"
+  },
+  {
+   "id": "crash_m1",
+   "event": "crash",
+   "spk": "man",
+   "say": "अबे साले, अंधा है क्या? गाड़ी चलाना सीख ले पहले!",
+   "en": "Abe saale, andha hai kya? Gaadi chalana seekh le pehle!",
+   "mode": "mature"
+  },
+  {
+   "id": "crash_m2",
+   "event": "crash",
+   "spk": "player",
+   "say": "तेरी माँ की आँख! ये कौन सा तरीका है चलाने का?",
+   "en": "Teri maa ki aankh! Ye kaun sa tareeka hai?",
+   "mode": "mature"
+  },
+  {
+   "id": "crash_m3",
+   "event": "crash",
+   "spk": "man",
+   "say": "चूतिया है क्या बे? मेरी नई गाड़ी ठोक दी!",
+   "en": "Chutiya hai kya be? Meri nayi gaadi thok di!",
+   "mode": "mature"
+  },
+  {
+   "id": "hitped_1",
+   "event": "hitPed",
+   "spk": "man",
+   "say": "ओए! अंधा है क्या?",
+   "en": "Oye! Andha hai kya?"
+  },
+  {
+   "id": "hitped_2",
+   "event": "hitPed",
+   "spk": "woman",
+   "say": "भैया धीरे! मार डालोगे क्या?",
+   "en": "Bhaiya dheere! Maar daaloge kya?"
+  },
+  {
+   "id": "hitped_3",
+   "event": "hitPed",
+   "spk": "man",
+   "say": "अरे मार डाला रे!",
+   "en": "Arre maar daala re!"
+  },
+  {
+   "id": "hitped_m1",
+   "event": "hitPed",
+   "spk": "man",
+   "say": "हरामखोर! रुक तू, अभी बताता हूँ!",
+   "en": "Haraamkhor! Ruk tu, abhi batata hoon!",
+   "mode": "mature"
+  },
+  {
+   "id": "hitped_m2",
+   "event": "hitPed",
+   "spk": "woman",
+   "say": "कमीने! तेरे घर वाले नहीं हैं क्या?",
+   "en": "Kameene! Tere ghar waale nahi hain kya?",
+   "mode": "mature"
+  },
+  {
+   "id": "hijack_1",
+   "event": "hijack",
+   "spk": "man",
+   "say": "ओए मेरी गाड़ी! चोर चोर, पकड़ो!",
+   "en": "Oye meri gaadi! Chor chor, pakdo!"
+  },
+  {
+   "id": "hijack_2",
+   "event": "hijack",
+   "spk": "man",
+   "say": "अभी तो EMI भी बाकी है भाई!",
+   "en": "Abhi toh EMI bhi baaki hai bhai!"
+  },
+  {
+   "id": "hijack_3",
+   "event": "hijack",
+   "spk": "autowala",
+   "say": "अरे मेरा ऑटो! मीटर तो डाउन कर दो कम से कम!",
+   "en": "Arre mera auto! Meter toh down kar do kam se kam!"
+  },
+  {
+   "id": "hijack_m1",
+   "event": "hijack",
+   "spk": "man",
+   "say": "अबे साले चोर! तेरी तो! वापस कर मेरी गाड़ी!",
+   "en": "Abe saale chor! Teri toh! Wapas kar meri gaadi!",
+   "mode": "mature"
+  },
+  {
+   "id": "wanted_1",
+   "event": "wanted",
+   "spk": "player",
+   "say": "मामू आ गए! भागो!",
+   "en": "Mamu aa gaye! Bhaago!"
+  },
+  {
+   "id": "wanted_2",
+   "event": "wanted",
+   "spk": "player",
+   "say": "अब तो गए काम से!",
+   "en": "Ab toh gaye kaam se!"
+  },
+  {
+   "id": "wanted_m1",
+   "event": "wanted",
+   "spk": "player",
+   "say": "भेजा फ्राई! पुलिस पीछे पड़ गई साली!",
+   "en": "Bheja fry! Police peechhe pad gayi saali!",
+   "mode": "mature"
+  },
+  {
+   "id": "morewanted_1",
+   "event": "moreWanted",
+   "spk": "player",
+   "say": "और पुलिस! ये तो बड़ा लफड़ा हो गया!",
+   "en": "Aur police! Ye toh bada lafda ho gaya!"
+  },
+  {
+   "id": "morewanted_2",
+   "event": "moreWanted",
+   "spk": "cop",
+   "say": "सभी यूनिट्स, संदिग्ध भाग रहा है! घेर लो उसे!",
+   "en": "All units, suspect is fleeing! Surround him!"
+  },
+  {
+   "id": "lostwanted_1",
+   "event": "lostWanted",
+   "spk": "player",
+   "say": "बच गए भाई! पुलिस को चकमा दे दिया!",
+   "en": "Bach gaye bhai! Police ko chakma de diya!"
+  },
+  {
+   "id": "lostwanted_2",
+   "event": "lostWanted",
+   "spk": "player",
+   "say": "हम तो हवा हैं, पकड़ में नहीं आते!",
+   "en": "Hum toh hawa hain, pakad mein nahi aate!"
+  },
+  {
+   "id": "copshout_1",
+   "event": "copShout",
+   "spk": "cop",
+   "say": "रुक जा! हाथ ऊपर!",
+   "en": "Ruk ja! Haath upar!"
+  },
+  {
+   "id": "copshout_2",
+   "event": "copShout",
+   "spk": "cop",
+   "say": "भागने की कोशिश मत करना!",
+   "en": "Bhaagne ki koshish mat karna!"
+  },
+  {
+   "id": "copshout_3",
+   "event": "copShout",
+   "spk": "cop",
+   "say": "गाड़ी साइड में लगाओ! अभी!",
+   "en": "Gaadi side mein lagao! Abhi!"
+  },
+  {
+   "id": "copshout_m1",
+   "event": "copShout",
+   "spk": "cop",
+   "say": "रुक जा हरामी! वरना गोली मार दूँगा!",
+   "en": "Ruk ja haraami! Warna goli maar doonga!",
+   "mode": "mature"
+  },
+  {
+   "id": "copshout_m2",
+   "event": "copShout",
+   "spk": "cop",
+   "say": "साले को ज़िंदा या मुर्दा, पकड़ो!",
+   "en": "Saale ko zinda ya murda, pakdo!",
+   "mode": "mature"
+  },
+  {
+   "id": "heli_1",
+   "event": "heli",
+   "spk": "cop",
+   "say": "हेलीकॉप्टर यूनिट पहुँच गई है। संदिग्ध पर नज़र है।",
+   "en": "Helicopter unit in position. Eyes on the suspect."
+  },
+  {
+   "id": "busted_1",
+   "event": "busted",
+   "spk": "cop",
+   "say": "पकड़ा गया! चल थाने, वहीं बात करेंगे।",
+   "en": "Pakda gaya! Chal thane, wahin baat karenge."
+  },
+  {
+   "id": "dead_1",
+   "event": "dead",
+   "spk": "player",
+   "say": "खतम, टाटा, बाय बाय!",
+   "en": "Khatam, tata, bye bye!"
+  },
+  {
+   "id": "done_1",
+   "event": "missionDone",
+   "spk": "player",
+   "say": "क्या बात है! एकदम झकास!",
+   "en": "Kya baat hai! Ekdum jhakaas!"
+  },
+  {
+   "id": "done_2",
+   "event": "missionDone",
+   "spk": "player",
+   "say": "पैसा ही पैसा होगा!",
+   "en": "Paisa hi paisa hoga!"
+  },
+  {
+   "id": "done_3",
+   "event": "missionDone",
+   "spk": "player",
+   "say": "भाई तो भाई है!",
+   "en": "Bhai toh bhai hai!"
+  },
+  {
+   "id": "fail_1",
+   "event": "missionFail",
+   "spk": "player",
+   "say": "कुछ नहीं हो सकता मेरा!",
+   "en": "Kuch nahi ho sakta mera!"
+  },
+  {
+   "id": "fail_2",
+   "event": "missionFail",
+   "spk": "player",
+   "say": "मज़ाक चल रहा है क्या?",
+   "en": "Mazaak chal raha hai kya?"
+  },
+  {
+   "id": "fail_m1",
+   "event": "missionFail",
+   "spk": "player",
+   "say": "धत तेरे की! सारा काम चौपट!",
+   "en": "Dhat tere ki! Saara kaam chaupat!",
+   "mode": "mature"
+  },
+  {
+   "id": "cow_1",
+   "event": "cow",
+   "spk": "man",
+   "say": "गाय को रास्ता दो भाई! पाप लगेगा!",
+   "en": "Gaay ko raasta do bhai! Paap lagega!"
+  },
+  {
+   "id": "cow_2",
+   "event": "cow",
+   "spk": "player",
+   "say": "गाय से पंगा नहीं लेने का!",
+   "en": "Gaay se panga nahi lene ka!"
+  },
+  {
+   "id": "blocked_1",
+   "event": "blocked",
+   "spk": "man",
+   "say": "साइड दे ना भाई! बीच में क्यों खड़ा है?",
+   "en": "Side de na bhai! Beech mein kyun khada hai?"
+  },
+  {
+   "id": "blocked_2",
+   "event": "blocked",
+   "spk": "autowala",
+   "say": "चलो चलो, जल्दी करो! हॉर्न ओके प्लीज़!",
+   "en": "Chalo chalo, jaldi karo! Horn OK please!"
+  },
+  {
+   "id": "blocked_m1",
+   "event": "blocked",
+   "spk": "man",
+   "say": "अबे हट ना बे! बाप का रोड है क्या?",
+   "en": "Abe hat na be! Baap ka road hai kya?",
+   "mode": "mature"
+  },
+  {
+   "id": "pickup_1",
+   "event": "pickup",
+   "spk": "player",
+   "say": "गरमा गरम समोसा! जान में जान आई।",
+   "en": "Garma garam samosa! Jaan mein jaan aayi."
+  },
+  {
+   "id": "money_1",
+   "event": "money",
+   "spk": "player",
+   "say": "आज तो लॉटरी लग गई!",
+   "en": "Aaj toh lottery lag gayi!"
+  },
+  {
+   "id": "train_1",
+   "event": "train",
+   "spk": "man",
+   "say": "लोकल आ गई! पटरी से हटो!",
+   "en": "Local aa gayi! Patri se hato!"
+  },
+  {
+   "id": "passenger_1",
+   "event": "passenger",
+   "spk": "woman",
+   "say": "भैया, स्टेशन चलोगे? मीटर से!",
+   "en": "Bhaiya, station chaloge? Meter se!"
+  },
+  {
+   "id": "passenger_2",
+   "event": "passenger",
+   "spk": "man",
+   "say": "जल्दी चलो, मीटिंग के लिए लेट हो रहा है!",
+   "en": "Jaldi chalo, meeting ke liye late ho raha hai!"
+  },
+  {
+   "id": "gunpanic_1",
+   "event": "gunPanic",
+   "spk": "woman",
+   "say": "बचाओ! गोली चल रही है!",
+   "en": "Bachao! Goli chal rahi hai!"
+  },
+  {
+   "id": "gunpanic_2",
+   "event": "gunPanic",
+   "spk": "man",
+   "say": "भागो! पागल है ये!",
+   "en": "Bhaago! Paagal hai ye!"
+  },
+  {
+   "id": "gunpanic_3",
+   "event": "gunPanic",
+   "spk": "man",
+   "say": "अरे बाप रे! पुलिस को बुलाओ!",
+   "en": "Arre baap re! Police ko bulao!"
+  },
+  {
+   "id": "pedhit_1",
+   "event": "pedHit",
+   "spk": "man",
+   "say": "आह! मार दिया!",
+   "en": "Aah! Maar diya!"
+  },
+  {
+   "id": "pedhit_m1",
+   "event": "pedHit",
+   "spk": "man",
+   "say": "आह! साले ने मार दिया!",
+   "en": "Aah! Saale ne maar diya!",
+   "mode": "mature"
+  },
+  {
+   "id": "punch_1",
+   "event": "punch",
+   "spk": "player",
+   "say": "ढिशूम!",
+   "en": "Dhishoom!"
+  },
+  {
+   "id": "punch_2",
+   "event": "punch",
+   "spk": "player",
+   "say": "एक मारा पर सॉलिड मारा!",
+   "en": "Ek maara par solid maara!"
+  },
+  {
+   "id": "goon_1",
+   "event": "goonShout",
+   "spk": "goon",
+   "say": "भाई का इलाका है! निकल यहाँ से!",
+   "en": "Bhai ka ilaaka hai! Nikal yahan se!"
+  },
+  {
+   "id": "goon_m1",
+   "event": "goonShout",
+   "spk": "goon",
+   "say": "उड़ा दो साले को!",
+   "en": "Uda do saale ko!",
+   "mode": "mature"
+  },
+  {
+   "id": "goon_m2",
+   "event": "goonShout",
+   "spk": "goon",
+   "say": "आज तेरी खैर नहीं, कमीने!",
+   "en": "Aaj teri khair nahi, kameene!",
+   "mode": "mature"
+  },
+  {
+   "id": "garage_1",
+   "event": "garage",
+   "spk": "man",
+   "say": "जुगाड़ गैराज! नया रंग, नई गाड़ी, पुलिस भी कन्फ्यूज़!",
+   "en": "Jugaad Garage! New paint, new car, even the police get confused!"
+  },
+  {
+   "id": "shop_1",
+   "event": "shop",
+   "spk": "goon",
+   "say": "आओ भाई, क्या चाहिए? माल एकदम ताज़ा है।",
+   "en": "Aao bhai, kya chahiye? Maal ekdum taaza hai."
+  },
+  {
+   "id": "cheat_1",
+   "event": "cheat",
+   "spk": "player",
+   "say": "जुगाड़ लग गया!",
+   "en": "Jugaad lag gaya!"
+  },
+  {
+   "id": "rain_1",
+   "event": "rain",
+   "spk": "man",
+   "say": "बारिश आ गई! छाता निकालो!",
+   "en": "Baarish aa gayi! Chhaata nikaalo!"
+  },
+  {
+   "id": "pain_1",
+   "event": "pain",
+   "spk": "player",
+   "say": "आह!",
+   "en": "Aah!"
+  },
+  {
+   "id": "pain_2",
+   "event": "pain",
+   "spk": "player",
+   "say": "उफ़!",
+   "en": "Uff!"
+  },
+  {
+   "id": "dj_dhol_1",
+   "event": "dj0",
+   "spk": "dj",
+   "say": "Hello Mayanagri! You are tuned in to Dhol Dhamaka F M, one zero four point two! Volume full, tension zero!",
+   "en": "Hello Mayanagri! Dhol Dhamaka FM 104.2. Volume full, tension zero!"
+  },
+  {
+   "id": "dj_dhol_2",
+   "event": "dj0",
+   "spk": "dj",
+   "say": "Stuck in traffic? Don't worry yaar, the dhol never stops. Neither does the honking.",
+   "en": "Stuck in traffic? The dhol never stops. Neither does the honking."
+  },
+  {
+   "id": "dj_raag_1",
+   "event": "dj1",
+   "spk": "rj",
+   "say": "Namaste. This is Raag Raasta, ninety eight point three. Breathe in, breathe out, and please don't hit the cow.",
+   "en": "Namaste. Raag Rasta 98.3. Breathe in, breathe out, and please don't hit the cow."
+  },
+  {
+   "id": "dj_raag_2",
+   "event": "dj1",
+   "spk": "rj",
+   "say": "Evening raag for your evening jam. Sixty minutes to cross two kilometres. Peaceful, no?",
+   "en": "Evening raag for your evening jam. Sixty minutes for two kilometres."
+  },
+  {
+   "id": "dj_filmi_1",
+   "event": "dj2",
+   "spk": "dj",
+   "say": "Retro Filmi ninety one point one! Where every song has a villain, a hero, and a mother crying in slow motion!",
+   "en": "Retro Filmi 91.1! Every song has a villain, a hero, and a crying mother in slow motion!"
+  },
+  {
+   "id": "dj_filmi_2",
+   "event": "dj2",
+   "spk": "dj",
+   "say": "Next song is dedicated to Pinky from Andheri, from Bunty from Borivali. Bunty, please return the scooter.",
+   "en": "Dedicated to Pinky from Bunty. Bunty, please return the scooter."
+  },
+  {
+   "id": "news_1",
+   "event": "news",
+   "spk": "news",
+   "say": "Mayanagri news. Police report a man stealing auto rickshaws and singing loudly. Citizens advised to keep calm and hold their chai.",
+   "en": "News: a man is stealing autos and singing loudly. Keep calm and hold your chai."
+  },
+  {
+   "id": "news_2",
+   "event": "news",
+   "spk": "news",
+   "say": "Breaking news. Pothole on Station Road declared a heritage site. Officials say it has been there since nineteen ninety.",
+   "en": "Breaking: Station Road pothole declared a heritage site."
+  },
+  {
+   "id": "m_chai",
+   "event": "intro_chai",
+   "spk": "man",
+   "say": "अरे भाई, चार कटिंग चाय पहुँचानी है, जल्दी! ठंडी हो गई तो पैसे नहीं मिलेंगे!",
+   "en": "Deliver four cutting chai, fast! If it gets cold, no money!"
+  },
+  {
+   "id": "m_auto",
+   "event": "intro_auto",
+   "spk": "autowala",
+   "say": "मेरा ऑटो ले जाओ, तीन सवारी छोड़ के आओ। मीटर से चलाना, समझे?",
+   "en": "Take my auto, drop three passengers. Use the meter, samjhe?"
+  },
+  {
+   "id": "m_dabba",
+   "event": "intro_dabba",
+   "spk": "man",
+   "say": "डब्बे टाइम पे पहुँचने चाहिए। लंच टाइम पवित्र होता है!",
+   "en": "The dabbas must reach on time. Lunch time is sacred!"
+  },
+  {
+   "id": "m_bhaago",
+   "event": "intro_bhaago",
+   "spk": "man",
+   "say": "किसी ने तेरा नाम ले लिया आम की गाड़ी चोरी में! पुलिस आ रही है, भाग!",
+   "en": "Someone blamed you for the mango cart theft! Police are coming, run!"
+  },
+  {
+   "id": "m_baraat",
+   "event": "intro_baraat",
+   "spk": "aunty",
+   "say": "हाय राम! दूल्हा अपनी ही शादी में लेट है! जल्दी गाड़ी चलाओ बेटा!",
+   "en": "Hai Ram! The groom is late to his own wedding! Drive fast, beta!"
+  },
+  {
+   "id": "m_cricket",
+   "event": "intro_cricket",
+   "spk": "man",
+   "say": "बंटी ने छक्का मार दिया! बॉल ढूँढ के ला, वरना मैच खतम!",
+   "en": "Bunty hit a six! Find the ball or the match is over!"
+  },
+  {
+   "id": "m_bus",
+   "event": "intro_bus",
+   "spk": "man",
+   "say": "ड्राइवर चाय पीने गया है। रूट इक्कीस चला दो, हर स्टॉप पे रुकना!",
+   "en": "The driver went for chai. Run Route 21 and stop at every stop!"
+  },
+  {
+   "id": "m_nakli",
+   "event": "intro_nakli",
+   "spk": "cop",
+   "say": "तीन ट्रक नकली माल लेकर घूम रहे हैं। ठोक दो उन्हें, मैं संभाल लूँगा।",
+   "en": "Three trucks carrying fake goods. Ram them, I'll handle the paperwork."
+  },
+  {
+   "id": "m_prasad",
+   "event": "intro_prasad",
+   "spk": "aunty",
+   "say": "बेटा, गेंदे के फूल, नारियल और लड्डू ले आओ। पूजा का टाइम हो रहा है!",
+   "en": "Beta, bring marigolds, coconut and laddoo. Puja time is near!"
+  },
+  {
+   "id": "m_horn",
+   "event": "intro_horn",
+   "spk": "man",
+   "say": "नया हॉर्न लगवाया है! पूरे शहर को सुनाओ, फिर माल बाज़ार पहुँचाओ।",
+   "en": "New horn installed! Let the whole city hear it, then deliver to the bazaar."
+  },
+  {
+   "id": "m_sprint",
+   "event": "intro_sprint",
+   "spk": "man",
+   "say": "शर्त लगी है! नब्बे की स्पीड पे सी फेस के दोनों छोर छू के दिखा!",
+   "en": "It's a bet! Hit ninety and touch both ends of the sea-face!"
+  },
+  {
+   "id": "m_supari",
+   "event": "intro_supari",
+   "spk": "don",
+   "say": "बाज़ार में एक आदमी है, बहुत ज़बान चलाता है। उसको चुप करा दे। सुपारी पक्की।",
+   "en": "There's a man in the bazaar who talks too much. Shut him up. The contract is yours.",
+   "mode": "mature"
+  },
+  {
+   "id": "m_heist",
+   "event": "intro_heist",
+   "spk": "don",
+   "say": "सहकारी बैंक की तिजोरी खुली है आज। अंदर जा, माल उठा, और पुलिस से बच के अड्डे पे आ।",
+   "en": "The co-op bank vault is open today. Go in, grab the cash, lose the cops, come to the hideout.",
+   "mode": "mature"
+  },
+  {
+   "id": "m_turf",
+   "event": "intro_turf",
+   "spk": "don",
+   "say": "चॉल में दूसरी गैंग घुस आई है। हमारा इलाका है। एक को भी ज़िंदा मत छोड़ना।",
+   "en": "A rival gang moved into the chawl. It's our turf. Don't leave a single one standing.",
+   "mode": "mature"
+  },
+  {
+   "id": "m_smuggle",
+   "event": "intro_smuggle",
+   "spk": "don",
+   "say": "बीच पे आमों की पेटियाँ हैं। अंदर क्या है, मत पूछना। गोदाम तक पहुँचा दे।",
+   "en": "Mango crates on the beach. Don't ask what's inside. Get them to the warehouse.",
+   "mode": "mature"
+  },
+  {
+   "id": "heist_alarm",
+   "event": "heistAlarm",
+   "spk": "cop",
+   "say": "बैंक में डकैती! सभी यूनिट्स, सहकारी बैंक पहुँचो!",
+   "en": "Bank robbery! All units to the co-op bank!",
+   "mode": "mature"
+  },
+  {
+   "id": "don_done",
+   "event": "donDone",
+   "spk": "don",
+   "say": "बढ़िया। तू काम का आदमी है। पैसे पहुँच जाएँगे।",
+   "en": "Good. You're useful. The money will reach you.",
+   "mode": "mature"
+  },
+  {
+   "id": "c1_0",
+   "event": "story_c1_0",
+   "spk": "narrator",
+   "say": "मायानगरी। जहाँ हर रोज़ लाखों लोग सपने लेकर आते हैं, और आधे तो स्टेशन पे ही खो जाते हैं।",
+   "en": "Mayanagri. Millions arrive with dreams every day... half get lost at the station itself."
+  },
+  {
+   "id": "c1_1",
+   "event": "story_c1_1",
+   "spk": "pappu",
+   "say": "अरे राजू! आ गया तू! देख, ये है मायानगरी। यहाँ पैसा है, पर मेहनत भी है।",
+   "en": "Arre Raju! You made it! This is Mayanagri. There's money here, but hard work too."
+  },
+  {
+   "id": "c1_2",
+   "event": "story_c1_2",
+   "spk": "player",
+   "say": "पप्पू भैया, गाँव में सबने कहा था कि यहाँ सड़कों पे सोना बिछा है।",
+   "en": "Pappu bhaiya, everyone back home said the streets here are paved with gold."
+  },
+  {
+   "id": "c1_3",
+   "event": "story_c1_3",
+   "spk": "pappu",
+   "say": "सोना नहीं, गड्ढे बिछे हैं! चल, मेरा ऑटो चला के दिखा। तीन सवारी, मीटर से!",
+   "en": "Not gold, potholes! Come, drive my auto. Three passengers, by the meter!"
+  },
+  {
+   "id": "c2_1",
+   "event": "story_c2_1",
+   "spk": "sharma",
+   "say": "तो तू है पप्पू का भाई? सुना है ऑटो अच्छा चलाता है।",
+   "en": "So you're Pappu's cousin? Heard you drive an auto well."
+  },
+  {
+   "id": "c2_2",
+   "event": "story_c2_2",
+   "spk": "player",
+   "say": "जी शर्मा जी। कोई भी काम दे दीजिए, मना नहीं करूँगा।",
+   "en": "Yes Sharma ji. Give me any work, I won't say no."
+  },
+  {
+   "id": "c2_3",
+   "event": "story_c2_3",
+   "spk": "sharma",
+   "say": "चार कटिंग चाय, चार दफ्तर। चाय ठंडी हुई तो तनख्वाह भी ठंडी!",
+   "en": "Four cutting chai, four offices. If the chai goes cold, so does your pay!"
+  },
+  {
+   "id": "c3_1",
+   "event": "story_c3_1",
+   "spk": "aunty",
+   "say": "हाय राम! तुम ही हो वो ड्राइवर? मेरी पिंकी की शादी है और दूल्हा गायब!",
+   "en": "Hai Ram! You're the driver? My Pinky's wedding is today and the groom has vanished!"
+  },
+  {
+   "id": "c3_2",
+   "event": "story_c3_2",
+   "spk": "player",
+   "say": "आंटी जी, चिंता मत कीजिए। दूल्हे को मैं टाइम पे पहुँचा दूँगा।",
+   "en": "Aunty ji, don't worry. I'll get the groom there on time."
+  },
+  {
+   "id": "c3_3",
+   "event": "story_c3_3",
+   "spk": "aunty",
+   "say": "और सुनो! गाड़ी पे एक खरोंच भी आई, तो तुम्हारी शादी कभी नहीं होगी!",
+   "en": "And listen! One scratch on the car and you'll never get married!"
+  },
+  {
+   "id": "c4_1",
+   "event": "story_c4_1",
+   "spk": "pappu",
+   "say": "राजू! गड़बड़ हो गई। किसी ने आम की गाड़ी चुराई और नाम तेरा लगा दिया!",
+   "en": "Raju! Big trouble. Someone stole a mango cart and blamed you!"
+  },
+  {
+   "id": "c4_2",
+   "event": "story_c4_2",
+   "spk": "player",
+   "say": "मेरा? मैं तो आम खाता भी नहीं!",
+   "en": "Me? I don't even eat mangoes!"
+  },
+  {
+   "id": "c4_3",
+   "event": "story_c4_3",
+   "spk": "pappu",
+   "say": "ये बात पुलिस को मत बताना। बस भाग!",
+   "en": "Don't tell the police that. Just run!"
+  },
+  {
+   "id": "c5_1",
+   "event": "story_c5_1",
+   "spk": "cop",
+   "say": "तो तुम हो आम चोर। बैठो। मैं हूँ इंस्पेक्टर पाटिल।",
+   "en": "So you're the mango thief. Sit. I'm Inspector Patil."
+  },
+  {
+   "id": "c5_2",
+   "event": "story_c5_2",
+   "spk": "player",
+   "say": "साहब, मैंने कुछ नहीं किया। माँ कसम!",
+   "en": "Sir, I didn't do anything. I swear on my mother!"
+  },
+  {
+   "id": "c5_3",
+   "event": "story_c5_3",
+   "spk": "cop",
+   "say": "मुझे पता है। असली चोर नकली माल वाले हैं। उनके तीन ट्रक ठोक दो, तुम्हारी फाइल गायब।",
+   "en": "I know. The real thieves are the fake-goods gang. Wreck their three trucks and your file disappears."
+  },
+  {
+   "id": "c6_1",
+   "event": "story_c6_1",
+   "spk": "pappu",
+   "say": "राजू, पूरा शहर तेरा नाम ले रहा है। आज सी फेस पे आख़िरी रेस है।",
+   "en": "Raju, the whole city is talking about you. Today's the final race on the sea-face."
+  },
+  {
+   "id": "c6_2",
+   "event": "story_c6_2",
+   "spk": "player",
+   "say": "और रेस जीत गया तो?",
+   "en": "And if I win the race?"
+  },
+  {
+   "id": "c6_3",
+   "event": "story_c6_3",
+   "spk": "pappu",
+   "say": "तो तू मायानगरी का राजा! हार गया तो वापस गाँव, भैंस चराने।",
+   "en": "Then you're the king of Mayanagri! Lose, and it's back to the village grazing buffaloes."
+  },
+  {
+   "id": "c6_end",
+   "event": "story_c6_end",
+   "spk": "narrator",
+   "say": "और इस तरह, गाँव का एक लड़का बना मायानगरी का राजा। ट्रैफिक आज भी वैसा ही है।",
+   "en": "And so, a village boy became the king of Mayanagri. The traffic is still the same."
+  },
+  {
+   "id": "m6_1",
+   "event": "story_m6_1",
+   "spk": "don",
+   "say": "पाटिल का कुत्ता बन गया है तू? मेरे तीन ट्रक तोड़ दिए।",
+   "en": "Became Patil's dog, have you? You broke my three trucks.",
+   "mode": "mature"
+  },
+  {
+   "id": "m6_2",
+   "event": "story_m6_2",
+   "spk": "player",
+   "say": "भाऊ, मैं तो बस अपनी जान बचा रहा था।",
+   "en": "Bhau, I was just saving my own skin.",
+   "mode": "mature"
+  },
+  {
+   "id": "m6_3",
+   "event": "story_m6_3",
+   "spk": "don",
+   "say": "जान बचानी है तो मेरे लिए काम कर। छोटा चिकना। आज रात।",
+   "en": "Want to stay alive? Work for me. Chhota Chikna. Tonight.",
+   "mode": "mature"
+  },
+  {
+   "id": "m7_1",
+   "event": "story_m7_1",
+   "spk": "don",
+   "say": "चिकना गया। अब उसकी गैंग चॉल में घुस आई है। साफ कर दे।",
+   "en": "Chikna's gone. Now his gang has moved into the chawl. Clean it out.",
+   "mode": "mature"
+  },
+  {
+   "id": "m7_2",
+   "event": "story_m7_2",
+   "spk": "player",
+   "say": "उसके बाद हिसाब बराबर?",
+   "en": "And after that, we're even?",
+   "mode": "mature"
+  },
+  {
+   "id": "m7_3",
+   "event": "story_m7_3",
+   "spk": "don",
+   "say": "भाऊ के साथ हिसाब कभी बराबर नहीं होता, बच्चे।",
+   "en": "With Bhau, accounts are never even, kid.",
+   "mode": "mature"
+  },
+  {
+   "id": "m8_1",
+   "event": "story_m8_1",
+   "spk": "don",
+   "say": "आख़िरी काम। सहकारी बैंक। उसके बाद तू आज़ाद।",
+   "en": "Last job. The co-op bank. After that, you're free.",
+   "mode": "mature"
+  },
+  {
+   "id": "m8_2",
+   "event": "story_m8_2",
+   "spk": "pappu",
+   "say": "राजू, मत कर! ये आदमी तुझे कभी नहीं छोड़ेगा।",
+   "en": "Raju, don't! This man will never let you go.",
+   "mode": "mature"
+  },
+  {
+   "id": "m8_3",
+   "event": "story_m8_3",
+   "spk": "player",
+   "say": "पप्पू भैया, इस बार मैं उसे नहीं छोड़ूँगा।",
+   "en": "Pappu bhaiya, this time I won't let HIM go.",
+   "mode": "mature"
+  },
+  {
+   "id": "m8_end",
+   "event": "story_m8_end",
+   "spk": "narrator",
+   "say": "बैंक का पैसा, भाऊ का इलाका, और पाटिल की फाइल, सब राजू के पास। मायानगरी में राजा बदलते रहते हैं।",
+   "en": "The bank's money, Bhau's turf, Patil's file... all with Raju now. In Mayanagri, kings keep changing.",
+   "mode": "mature"
+  },
+  {
+   "id": "stunt_1",
+   "event": "stunt",
+   "spk": "player",
+   "say": "उड़ता राजू!",
+   "en": "Flying Raju!"
+  },
+  {
+   "id": "stunt_2",
+   "event": "stunt",
+   "spk": "player",
+   "say": "ये देखो! बिना पंख के उड़ गया!",
+   "en": "Look at that! Flew without wings!"
+  },
+  {
+   "id": "stunt_3",
+   "event": "stunt",
+   "spk": "man",
+   "say": "अरे बाप रे! ये आदमी पागल है!",
+   "en": "Oh my god! This guy is crazy!"
+  },
+  {
+   "id": "stunt_m1",
+   "event": "stunt",
+   "spk": "player",
+   "say": "साला, क्या जंप मारा है!",
+   "en": "Damn, what a jump!",
+   "mode": "mature"
+  },
+  {
+   "id": "boat_1",
+   "event": "boat",
+   "spk": "player",
+   "say": "समंदर का राजा!",
+   "en": "King of the sea!"
+  },
+  {
+   "id": "boat_2",
+   "event": "boat",
+   "spk": "player",
+   "say": "आज तो मछलियाँ भी जलेंगी!",
+   "en": "Even the fish are jealous today!"
+  },
+  {
+   "id": "sink_1",
+   "event": "sink",
+   "spk": "player",
+   "say": "अरे! गाड़ी डूब गई! तैर के निकलो!",
+   "en": "Arre! The car sank! Swim for it!"
+  },
+  {
+   "id": "sink_m1",
+   "event": "sink",
+   "spk": "player",
+   "say": "धत तेरी! साली गाड़ी समंदर में!",
+   "en": "Dammit! The damn car's in the sea!",
+   "mode": "mature"
+  },
+  {
+   "id": "swim_1",
+   "event": "swim",
+   "spk": "player",
+   "say": "भीग गए यार!",
+   "en": "Soaked, yaar!"
+  },
+  {
+   "id": "swim_2",
+   "event": "swim",
+   "spk": "player",
+   "say": "पानी तो ठंडा है!",
+   "en": "The water's cold!"
+  },
+  {
+   "id": "coast_1",
+   "event": "coastShout",
+   "spk": "cop",
+   "say": "कोस्ट गार्ड! इंजन बंद करो और हाथ ऊपर!",
+   "en": "Coast Guard! Kill the engine, hands up!"
+  },
+  {
+   "id": "coast_m1",
+   "event": "coastShout",
+   "spk": "cop",
+   "say": "रुक जा साले, समंदर में भी नहीं बचेगा!",
+   "en": "Stop, bastard, you won't escape even at sea!",
+   "mode": "mature"
+  },
+  {
+   "id": "treasure_1",
+   "event": "treasure",
+   "spk": "player",
+   "say": "किले का खज़ाना! आज तो मैं अमीर!",
+   "en": "The fort's treasure! I'm rich today!"
+  },
+  {
+   "id": "m_machhli",
+   "event": "intro_machhli",
+   "spk": "woman",
+   "say": "बेटा, हमारी नाव ले जाओ। जाल में मछली फँसी है, जल्दी लाओ, बाज़ार बंद हो जाएगा!",
+   "en": "Take our boat, son. Fish are in the nets, bring them quick before the market closes!"
+  },
+  {
+   "id": "m_regatta",
+   "event": "intro_regatta",
+   "spk": "man",
+   "say": "समंदर की सबसे तेज़ रेस! सारे बॉय पार करो और टाइम से पहले लौटो!",
+   "en": "The fastest race at sea! Clear every buoy and beat the clock!"
+  },
+  {
+   "id": "m_samundar",
+   "event": "intro_samundar",
+   "spk": "don",
+   "say": "बाहर एक जहाज़ खड़ा है। पेटियाँ उठा, कोस्ट गार्ड से बच, और किले में छुपा दे।",
+   "en": "A ship is anchored offshore. Grab the crates, dodge the Coast Guard, hide them in the fort.",
+   "mode": "mature"
+  }
+ ]
+}

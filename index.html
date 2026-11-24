@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayanagri: Bharat Streets</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #000; font-family: 'Trebuchet MS', 'Segoe UI', sans-serif; color: #fff; user-select: none; }
+    #game { position: fixed; inset: 0; }
+    .hud { position: fixed; pointer-events: none; text-shadow: 2px 2px 0 #000, -1px -1px 0 #000; }
+    #topright { top: 16px; right: 20px; text-align: right; }
+    #money { font-size: 34px; font-weight: 900; color: #7dff7a; letter-spacing: 1px; }
+    #stars { font-size: 30px; color: #444; letter-spacing: 2px; }
+    #stars .on { color: #ffd60a; animation: blink 0.5s infinite alternate; }
+    @keyframes blink { from { opacity: 1 } to { opacity: 0.35 } }
+    #health { width: 220px; height: 12px; background: #3a0000; border: 2px solid #000; margin: 6px 0 0 auto; }
+    #health > div { height: 100%; background: linear-gradient(90deg, #ff3d3d, #ff9a3d); width: 100%; transition: width .2s; }
+    #clock { font-size: 18px; color: #ffe8b0; margin-top: 4px; }
+    #mission { top: 16px; left: 50%; transform: translateX(-50%); text-align: center; font-size: 20px; font-weight: 700; max-width: 60vw; }
+    #mission .title { color: #ffd60a; font-size: 24px; }
+    #mission .timer { color: #ff9f1c; font-size: 26px; }
+    #mission .obj { color: #fff; }
+    #toast { top: 120px; left: 50%; transform: translateX(-50%); font-size: 26px; font-weight: 900; color: #ffd60a; opacity: 0; transition: opacity .3s; text-align: center; }
+    #subtitle { bottom: 110px; left: 50%; transform: translateX(-50%); font-size: 24px; font-weight: 700; background: rgba(0,0,0,.55); padding: 6px 16px; border-radius: 8px; opacity: 0; transition: opacity .3s; text-shadow: none; max-width: 70vw; text-align: center; }
+    #prompt { bottom: 170px; left: 50%; transform: translateX(-50%); font-size: 18px; background: rgba(0,0,0,.6); padding: 6px 14px; border-radius: 6px; text-shadow: none; display: none; }
+    #minimapWrap { left: 20px; bottom: 20px; width: 210px; height: 210px; border-radius: 50%; overflow: hidden; border: 4px solid #111; box-shadow: 0 0 0 2px #ffd60a; }
+    #area { left: 240px; bottom: 26px; font-size: 22px; font-weight: 900; color: #fff; font-style: italic; opacity: 0; transition: opacity .6s; }
+    #veh { right: 24px; bottom: 22px; text-align: right; }
+    #veh .name { font-size: 18px; color: #ffd60a; }
+    #veh .speed { font-size: 40px; font-weight: 900; }
+    #veh .vhp { width: 160px; height: 8px; background: #222; margin-left: auto; border: 1px solid #000; }
+    #veh .vhp > div { height: 100%; background: #4cc9f0; }
+    #radio { top: 70px; left: 50%; transform: translateX(-50%); font-size: 22px; color: #f15bb5; font-weight: 900; opacity: 0; transition: opacity .4s; }
+    #big { inset: 0; display: flex; align-items: center; justify-content: center; font-size: 84px; font-weight: 900; opacity: 0; transition: opacity .5s; background: radial-gradient(transparent, rgba(0,0,0,.7)); }
+    #bigmap { inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.75); pointer-events: auto; flex-direction: column; }
+    #bigmap canvas { border: 4px solid #ffd60a; max-height: 86vh; max-width: 92vw; }
+    .overlay { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: radial-gradient(circle at 50% 30%, #ff9933cc, #4a0e2ecc 55%, #0b0b1aee); z-index: 10; }
+    .overlay h1 { font-size: 72px; margin: 0; letter-spacing: 2px; background: linear-gradient(#fff6d5, #ffbe0b 50%, #ff6b00); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(4px 4px 0 #000); text-align: center; }
+    .overlay h2 { margin: 4px 0 18px; color: #fff; font-weight: 400; letter-spacing: 6px; }
+    .tricolor { height: 6px; width: 300px; background: linear-gradient(90deg, #ff9933 33%, #fff 33% 66%, #138808 66%); margin-bottom: 18px; }
+    .controls { display: grid; grid-template-columns: auto auto; gap: 4px 22px; background: rgba(0,0,0,.45); padding: 14px 22px; border-radius: 10px; font-size: 15px; max-width: 640px; }
+    .controls b { color: #ffd60a; }
+    button.start { margin-top: 20px; font-size: 26px; font-weight: 900; padding: 12px 40px; border-radius: 40px; border: 3px solid #000; background: #ffd60a; color: #000; cursor: pointer; box-shadow: 4px 4px 0 #000; }
+    button.start:hover { background: #fff; }
+    .note { margin-top: 12px; font-size: 13px; color: #ffe8b0; opacity: .85; max-width: 640px; text-align: center; }
+    #board { right: 20px; top: 150px; font-size: 12px; background: rgba(0,0,0,.45); padding: 6px 10px; border-radius: 6px; text-shadow: none; display: none; }
+    #fps { left: 6px; top: 4px; font-size: 11px; color: #aaa; }
+    body.cine .hud:not(#subtitle):not(#big) { visibility: hidden; }
+    body.cine #subtitle { bottom: 13vh; z-index: 7; }
+  </style>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="topright" class="hud">
+    <div id="money">₹ 500</div>
+    <div id="stars"></div>
+    <div id="health"><div></div></div>
+    <div id="armor" style="width:220px;height:8px;background:#0b2540;border:2px solid #000;margin:3px 0 0 auto;display:none"><div style="height:100%;background:#4cc9f0;width:0"></div></div>
+    <div id="weapon" style="font-size:18px;margin-top:4px;transition:transform .15s">👊 Mukka (Fists)</div>
+    <div id="clock">06:00</div>
+  </div>
+  <div id="mission" class="hud"></div>
+  <div id="toast" class="hud"></div>
+  <div id="radio" class="hud"></div>
+  <div id="subtitle" class="hud"></div>
+  <div id="prompt" class="hud"></div>
+  <div id="minimapWrap" class="hud"><canvas id="minimap" width="210" height="210"></canvas></div>
+  <div id="area" class="hud"></div>
+  <div id="veh" class="hud"></div>
+  <div id="board" class="hud"></div>
+  <div id="big" class="hud"></div>
+  <div id="fps" class="hud"></div>
+  <div id="crosshair" class="hud" style="left:50%;top:50%;transform:translate(-50%,-50%);display:none;font-size:26px;color:#fff;text-shadow:0 0 3px #000">✛</div>
+  <div id="bigmap" class="hud"><canvas id="bigmapCanvas" width="900" height="900"></canvas><div style="margin-top:8px">M to close · 🟡 missions · 🔵 police thana · 🔴 hospital · 🟢 you</div></div>
+
+  <div id="letterbox" style="display:none;pointer-events:none"><div style="position:fixed;left:0;right:0;top:0;height:11vh;background:#000;z-index:5"></div><div style="position:fixed;left:0;right:0;bottom:0;height:11vh;background:#000;z-index:5"></div><div style="position:fixed;right:18px;bottom:2vh;z-index:6;color:#aaa;font-size:13px">Enter / Space — skip</div></div>
+  <div id="credits" class="overlay" style="display:none;z-index:30;cursor:pointer">
+    <h1>MAYANAGRI</h1><h2>RAJU KI KAHANI — THE END</h2><div class="tricolor"></div>
+    <div class="note" style="font-size:16px;line-height:1.8">Thanks for playing!<br>Characters &amp; cars: Quaternius (CC0) · Voices: Microsoft Edge neural TTS via edge-tts<br>Music &amp; sound: synthesised live in your browser<br>Traffic: still the same.<br><br><i>Click to keep roaming the city.</i></div>
+  </div>
+  <div id="menu" class="overlay">
+    <h1>MAYANAGRI</h1>
+    <h2>BHARAT STREETS</h2>
+    <div class="tricolor"></div>
+    <div class="controls">
+      <div><b>WASD</b> walk / drive</div><div><b>Mouse</b> look (click to lock)</div>
+      <div><b>Shift</b> sprint · <b>Space</b> jump / handbrake</div><div><b>F</b> enter / exit / hijack vehicle</div>
+      <div><b>H</b> horn (use it. a lot.)</div><div><b>E</b> start mission at 🟡 marker</div>
+      <div><b>R</b> change radio station</div><div><b>1-9</b> meme soundboard · <b>B</b> show board</div>
+      <div><b>M</b> big map · <b>C</b> camera · <b>V</b> first person</div><div><b>P</b> pause · <b>N</b> mute</div>
+      <div><b>Right mouse / Z</b> aim · <b>Left mouse / Ctrl / X</b> fire/punch</div><div><b>Q / Tab / wheel</b> switch weapon</div>
+      <div>🔵 Jugaad Garage = repair + lose cops</div><div>🔴 Hathiyar Bhandar = weapons &amp; armour</div>
+      <div style="grid-column:1/3;opacity:.8">Cheats: type <b>JUGAAD</b> · <b>PAISA</b> · <b>MAMU</b> · <b>HATHIYAR</b> · <b>BARISH</b> · <b>TAMASHA</b></div>
+    </div>
+    <label style="margin-top:16px;background:rgba(0,0,0,.5);padding:8px 14px;border-radius:8px;border:2px solid #ff3d3d;cursor:pointer;font-size:15px">
+      <input type="checkbox" id="mature18" style="transform:scale(1.3);margin-right:8px">
+      <b style="color:#ff3d3d">18+ MODE</b> — guns, blood, uncensored gaali, gangster missions. I confirm I am 18 or older.
+    </label>
+    <button class="start" id="startBtn">CHALO! ▶</button>
+    <div class="note">All sounds are synthesised live. Voices use your system's Hindi text-to-speech voice. Add your own meme clips in <code>public/sounds/</code> (see README) to replace event sounds and the 1-9 soundboard.</div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
